@@ -15,7 +15,7 @@ if k <= 0 or k >= SECP256k1.order:
 
 signature = private_key.sign(hashed_message)
 
-signature_hex = signature.hex()
+signature_hex = bytes.fromhex(signature_hex)
 
 if len(signature_hex) != 128:
     random.seed(1)
